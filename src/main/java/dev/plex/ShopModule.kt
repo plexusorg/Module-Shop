@@ -30,7 +30,7 @@ class ShopModule : PlexModule() {
     }
 
     override fun enable() {
-        ShopMenu.registerItem(18, FireballItem(
+        ShopMenu.registerItem(22, FireballItem(
                 ItemBuilder(Material.FIRE_CHARGE).displayName(SafeMiniMessage.mmDeserialize("<!italic><red>Fireball")).build(),
                 getConfig().getDouble("shop.prices.fireball", 0.0)
         ))

@@ -1,5 +1,6 @@
 package dev.plex.commands
 
+import dev.plex.ShopModule
 import dev.plex.cache.DataUtils
 import dev.plex.command.PlexCommand
 import dev.plex.command.annotation.CommandParameters

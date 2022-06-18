@@ -1,5 +1,7 @@
 package dev.plex.listener
 
+import dev.plex.cache.DataUtils
+import dev.plex.shop.ShopMenu
 import dev.plex.util.minimessage.SafeMiniMessage
 import net.kyori.adventure.text.Component
 import org.bukkit.event.EventHandler
@@ -17,7 +19,11 @@ class ShopListener : PlexListener()
             return
         }
         event.isCancelled = true
-
+        if (!ShopMenu.ITEMS.containsKey(event.slot))
+        {
+            return
+        }
+        ShopMenu.ITEMS[event.slot]!!.purchase(DataUtils.getPlayer(event.whoClicked.uniqueId))
     }
 
 }
