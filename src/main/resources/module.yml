@@ -1,4 +1,4 @@
 name: Module-Example
-main: dev.plex.ExampleModule
+main: dev.plex.ShopModule
 description: An example module for Plex
 version: 1.0

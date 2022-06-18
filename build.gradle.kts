@@ -1,6 +1,9 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
     java
     `maven-publish`
+    kotlin("jvm") version "1.7.0"
 }
 
 repositories {
@@ -20,7 +23,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.24")
     compileOnly("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
     compileOnly("dev.plex:server:1.2-SNAPSHOT")
-    compileOnly("dev.plex:api:1.2-SNAPSHOT")
+    implementation(kotlin("stdlib-jdk8"))
 }
 
 group = "dev.plex"
@@ -54,4 +57,12 @@ tasks {
     processResources {
         filteringCharset = Charsets.UTF_8.name()
     }
+}
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    jvmTarget = "17"
+}
+val compileTestKotlin: KotlinCompile by tasks
+compileTestKotlin.kotlinOptions {
+    jvmTarget = "17"
 }
