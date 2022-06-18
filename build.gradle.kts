@@ -28,7 +28,7 @@ dependencies {
 
 group = "dev.plex"
 version = "1.0"
-description = "ExampleModule"
+description = "ShopModule"
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(17))
@@ -43,8 +43,12 @@ publishing {
 }
 
 tasks.getByName<Jar>("jar") {
-    archiveBaseName.set("Plex-ExampleModule")
+    archiveBaseName.set("Plex-Shop")
     archiveVersion.set("")
+    duplicatesStrategy = org.gradle.api.file.DuplicatesStrategy.EXCLUDE
+    from({
+        configurations.runtimeClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) }
+    })
 }
 
 tasks {
