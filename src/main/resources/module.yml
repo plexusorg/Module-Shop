@@ -1,4 +1,4 @@
-name: Plex-Shop
+name: Module-Shop
 main: dev.plex.ShopModule
-description: An example module for Plex
-version: 1.0
+description: The shop module for Plex
+version: 1.2-SNAPSHOT
