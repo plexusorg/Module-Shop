@@ -1,2 +1,2 @@
-rootProject.name = "plex-shop"
+rootProject.name = "Module-Shop"
 

@@ -25,7 +25,7 @@ class ShopModule : PlexModule() {
     override fun load()
     {
         module = this;
-        config = ModuleConfig(this, "data/config.yml", "config.yml")
+        config = ModuleConfig(this, "shop/config.yml", "config.yml")
         getConfig().load()
     }
 
