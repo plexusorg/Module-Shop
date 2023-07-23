@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     `maven-publish`
-    kotlin("jvm") version "1.8.20-RC"
+    kotlin("jvm") version "1.9.0"
 }
 
 repositories {
